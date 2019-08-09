@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,10 @@
 		1B49A64122FE146E00E23E34 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B49A63F22FE146E00E23E34 /* LaunchScreen.storyboard */; };
 		1B49A64C22FE146E00E23E34 /* StarWarsAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B49A64B22FE146E00E23E34 /* StarWarsAppTests.swift */; };
 		1B49A65722FE146E00E23E34 /* StarWarsAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B49A65622FE146E00E23E34 /* StarWarsAppUITests.swift */; };
+		1B49A66622FE1D8E00E23E34 /* Planet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B49A66522FE1D8E00E23E34 /* Planet.swift */; };
+		1B49A66922FE1F3100E23E34 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B49A66822FE1F3100E23E34 /* NetworkClient.swift */; };
+		1B49A66B22FE293200E23E34 /* PlanetList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B49A66A22FE293200E23E34 /* PlanetList.swift */; };
+		1B49A66F22FE2A9100E23E34 /* MainFacade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B49A66E22FE2A9100E23E34 /* MainFacade.swift */; };
 		95C50EDBCB79CE36C45528C1 /* Pods_StarWarsAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 893AA3A4609CBD62954C652F /* Pods_StarWarsAppUITests.framework */; };
 		E931B511A76A9E031D83DF13 /* Pods_StarWarsAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 123C70B191D3B7477F8444B5 /* Pods_StarWarsAppTests.framework */; };
 		F9E2BCB08EC948484A09A412 /* Pods_StarWarsApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E175DB55C0EBAB3FBD7D782 /* Pods_StarWarsApp.framework */; };
@@ -51,6 +55,10 @@
 		1B49A65222FE146E00E23E34 /* StarWarsAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StarWarsAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B49A65622FE146E00E23E34 /* StarWarsAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarsAppUITests.swift; sourceTree = "<group>"; };
 		1B49A65822FE146E00E23E34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1B49A66522FE1D8E00E23E34 /* Planet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Planet.swift; sourceTree = "<group>"; };
+		1B49A66822FE1F3100E23E34 /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
+		1B49A66A22FE293200E23E34 /* PlanetList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetList.swift; sourceTree = "<group>"; };
+		1B49A66E22FE2A9100E23E34 /* MainFacade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFacade.swift; sourceTree = "<group>"; };
 		1CC85EBA5ADBA3C78055913E /* Pods-StarWarsAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarWarsAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-StarWarsAppUITests/Pods-StarWarsAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		4C4FD2E7AF655E83B112F552 /* Pods-StarWarsAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarWarsAppTests.release.xcconfig"; path = "Target Support Files/Pods-StarWarsAppTests/Pods-StarWarsAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		5CA53184094270BD66CEF55A /* Pods-StarWarsAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarWarsAppTests.debug.xcconfig"; path = "Target Support Files/Pods-StarWarsAppTests/Pods-StarWarsAppTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -114,6 +122,9 @@
 		1B49A63522FE146D00E23E34 /* StarWarsApp */ = {
 			isa = PBXGroup;
 			children = (
+				1B49A66D22FE2A7A00E23E34 /* Manager */,
+				1B49A66722FE1F0E00E23E34 /* Network */,
+				1B49A66422FE1D6300E23E34 /* Models */,
 				1B49A63622FE146D00E23E34 /* AppDelegate.swift */,
 				1B49A63822FE146D00E23E34 /* ViewController.swift */,
 				1B49A63A22FE146D00E23E34 /* Main.storyboard */,
@@ -142,6 +153,39 @@
 			path = StarWarsAppUITests;
 			sourceTree = "<group>";
 		};
+		1B49A66422FE1D6300E23E34 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1B49A66C22FE293B00E23E34 /* Planets */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1B49A66722FE1F0E00E23E34 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				1B49A66822FE1F3100E23E34 /* NetworkClient.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		1B49A66C22FE293B00E23E34 /* Planets */ = {
+			isa = PBXGroup;
+			children = (
+				1B49A66522FE1D8E00E23E34 /* Planet.swift */,
+				1B49A66A22FE293200E23E34 /* PlanetList.swift */,
+			);
+			path = Planets;
+			sourceTree = "<group>";
+		};
+		1B49A66D22FE2A7A00E23E34 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				1B49A66E22FE2A9100E23E34 /* MainFacade.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
 		4880F7E9ADE75885ECD146D3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -162,7 +206,6 @@
 				1CC85EBA5ADBA3C78055913E /* Pods-StarWarsAppUITests.debug.xcconfig */,
 				887886E8C6023BF943BF9F30 /* Pods-StarWarsAppUITests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -387,8 +430,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B49A66622FE1D8E00E23E34 /* Planet.swift in Sources */,
 				1B49A63922FE146D00E23E34 /* ViewController.swift in Sources */,
 				1B49A63722FE146D00E23E34 /* AppDelegate.swift in Sources */,
+				1B49A66B22FE293200E23E34 /* PlanetList.swift in Sources */,
+				1B49A66F22FE2A9100E23E34 /* MainFacade.swift in Sources */,
+				1B49A66922FE1F3100E23E34 /* NetworkClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

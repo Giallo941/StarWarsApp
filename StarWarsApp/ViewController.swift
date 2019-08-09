@@ -9,12 +9,20 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    let mainFacade = MainFacade()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        mainFacade.planets { (planets, error) in
+            guard let listOfPlanets = planets  else { return }
+            for planet in listOfPlanets {
+                guard let name = planet.name else { return }
+                print(name)
+            }
+        }
     }
-
 
 }
 
