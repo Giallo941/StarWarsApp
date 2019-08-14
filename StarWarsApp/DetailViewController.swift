@@ -14,6 +14,7 @@ class DetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.largeTitleDisplayMode = .never
         self.navigationItem.title = planet?.name
     }
 

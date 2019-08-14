@@ -49,7 +49,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Planets" largeTitleDisplayMode="always" id="qp4-wW-soh"/>
+                    <navigationItem key="navigationItem" title="Planets" largeTitleDisplayMode="never" id="qp4-wW-soh"/>
                     <connections>
                         <outlet property="tableView" destination="awE-mT-Efp" id="Goi-iB-Hkm"/>
                     </connections>
@@ -68,8 +68,12 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="zOK-PJ-uz2"/>
                     </view>
+                    <connections>
+                        <segue destination="8LP-qD-d4s" kind="unwind" identifier="unwindToViewController" unwindAction="unwindToViewController:" id="Oy0-ZC-U4s"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Dz-sb-Ome" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="8LP-qD-d4s" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1809" y="64"/>
         </scene>
@@ -78,8 +82,8 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Qgn-Q9-6ph" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="moW-SC-jYa">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="moW-SC-jYa">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

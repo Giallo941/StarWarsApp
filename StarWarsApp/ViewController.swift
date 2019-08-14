@@ -25,6 +25,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         loadData()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+       self.navigationItem.largeTitleDisplayMode = .always
+    }
+    
+    // Load async
     func loadData(){
         mainFacade.planets { (planets, error) in
             guard let listOfPlanets = planets  else { return }
